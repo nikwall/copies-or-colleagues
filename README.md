@@ -36,9 +36,9 @@ including the console output of each script as `derived/log_<script>.txt`. The o
 | Script | Paper |
 |---|---|
 | `build_matrix_2024.py`, `validate_2024.py` | 2024 round, 578 items; check against ForecastBench's human medians (Section 4.6) |
-| `analysis_h1_h4_2024.py`, `supplement_2024.py` | H1 to H4: Tables 4 and 5, Figure 1, Appendix Table 9 (Panel A) |
+| `analysis_h1_h4_2024.py`, `supplement_2024.py` | H1 to H4: Tables 4 and 5, Figure 1, Appendix Table 10 (Panel A) |
 | `bootstrap_2024.py` | Question-level bootstrap for H3 and H4 (Section 5.2, Table 5) |
-| `build_panel_rounds.py`, `analysis_h5.py`, `make_figure_data.py` | H5: Table 6, Figure 2, Appendix Table 9 (Panel B) |
+| `build_panel_rounds.py`, `analysis_h5.py`, `make_figure_data.py` | H5: Table 6, Figure 2, Appendix Table 10 (Panel B) |
 | `analysis_h6.py` | H6: Table 7 |
 | `build_panel_external.py`, `analysis_h7_tournament.py` | H7 and the market-price comparison: Table 8 (Panels A and B), Section 5.5 |
 | `analysis_noise_parity.py` | Bound on outcome noise: Table 9, Section 5.7; entries of the parity teams: Table 8, Panel C |
