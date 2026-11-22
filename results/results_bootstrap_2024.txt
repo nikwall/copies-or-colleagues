@@ -1,0 +1,44 @@
+replicates: 1000, questions: 162, items: 578
+                                            statistic   point      lo  median     hi  share_finite  share_below_0
+                             public floor F | dataset  0.1682  0.1483  0.1679 0.1886           NaN            NaN
+                         public crowd Brier | dataset  0.1696  0.1496  0.1692 0.1900           NaN            NaN
+                              public floor F | market  0.1311  0.0964  0.1309 0.1694           NaN            NaN
+                          public crowd Brier | market  0.1324  0.0977  0.1322 0.1706           NaN            NaN
+                             public floor F | overall  0.1496  0.1307  0.1495 0.1709           NaN            NaN
+                         public crowd Brier | overall  0.1510  0.1320  0.1508 0.1723           NaN            NaN
+                     fixed, no price: Brier | dataset  0.1458  0.1237  0.1458 0.1678           NaN            NaN
+                        fixed, no price: N* | dataset     inf     inf     inf    inf        0.0210            NaN
+                      fixed, no price: Brier | market  0.1714  0.1198  0.1683 0.2208           NaN            NaN
+                         fixed, no price: N* | market  1.5712  0.7032  1.6469    inf        0.9440            NaN
+                     fixed, no price: Brier | overall  0.1586  0.1304  0.1576 0.1869           NaN            NaN
+                        fixed, no price: N* | overall  7.2205  1.8295  7.5153    inf        0.7270            NaN
+                        fixed, no price: w* on public  0.6100  0.2000  0.6100 0.9400           NaN            NaN
+                fixed, no price: hybrid OOS | overall  0.1480  0.1283  0.1492 0.1740           NaN            NaN
+         fixed, no price: edge (hybrid - better part) -0.0029 -0.0061  0.0006 0.0128           NaN         0.4500
+                   fixed, with price: Brier | dataset  0.1458  0.1237  0.1458 0.1678           NaN            NaN
+                      fixed, with price: N* | dataset     inf     inf     inf    inf        0.0210            NaN
+                    fixed, with price: Brier | market  0.1434  0.0920  0.1423 0.2032           NaN            NaN
+                       fixed, with price: N* | market  5.1286  1.3035  6.1779    inf        0.7390            NaN
+                   fixed, with price: Brier | overall  0.1446  0.1165  0.1443 0.1772           NaN            NaN
+                      fixed, with price: N* | overall     inf  3.6418     inf    inf        0.2910            NaN
+                      fixed, with price: w* on public  0.3900  0.0300  0.3800 0.7300           NaN            NaN
+              fixed, with price: hybrid OOS | overall  0.1418  0.1175  0.1435 0.1708           NaN            NaN
+       fixed, with price: edge (hybrid - better part) -0.0028 -0.0053  0.0004 0.0084           NaN         0.4430
+              ex post best, no price: Brier | dataset  0.1458  0.1290  0.1552 0.1822           NaN            NaN
+                 ex post best, no price: N* | dataset     inf  4.8070     inf    inf        0.1540            NaN
+               ex post best, no price: Brier | market  0.1714  0.1078  0.1469 0.1853           NaN            NaN
+                  ex post best, no price: N* | market  1.5712  1.1981  4.0448    inf        0.8010            NaN
+              ex post best, no price: Brier | overall  0.1586  0.1267  0.1515 0.1741           NaN            NaN
+                 ex post best, no price: N* | overall  7.2205  2.9325 36.1911    inf        0.5870            NaN
+                 ex post best, no price: w* on public  0.6100  0.1600  0.5100 0.8300           NaN            NaN
+         ex post best, no price: hybrid OOS | overall  0.1480  0.1260  0.1466 0.1684           NaN            NaN
+  ex post best, no price: edge (hybrid - better part) -0.0029 -0.0067 -0.0008 0.0100           NaN         0.5950
+            ex post best, with price: Brier | dataset  0.1458  0.1262  0.1519 0.1798           NaN            NaN
+               ex post best, with price: N* | dataset     inf  5.6626     inf    inf        0.1080            NaN
+             ex post best, with price: Brier | market  0.1434  0.0818  0.1287 0.1786           NaN            NaN
+                ex post best, with price: N* | market  5.1286  2.5320     inf    inf        0.4290            NaN
+            ex post best, with price: Brier | overall  0.1446  0.1150  0.1402 0.1680           NaN            NaN
+               ex post best, with price: N* | overall     inf  9.2070     inf    inf        0.1370            NaN
+               ex post best, with price: w* on public  0.3900  0.0000  0.3100 0.6000           NaN            NaN
+       ex post best, with price: hybrid OOS | overall  0.1418  0.1157  0.1402 0.1664           NaN            NaN
+ex post best, with price: edge (hybrid - better part) -0.0028 -0.0049  0.0000 0.0051           NaN         0.4870

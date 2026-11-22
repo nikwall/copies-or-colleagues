@@ -1,0 +1,26 @@
+PART A  2024 round, 57 resolved market items; anchor alone: Brier 0.1286
+   group                                    members |p-anchor| within .02 corr(e, e_anchor)     a  Brier
+   public individuals                           500      0.179       0.26              0.74  0.67 0.1920
+   superforecasters                              40      0.128       0.32              0.80  0.87 0.0926
+   models, zero_shot                             17      0.234       0.10              0.75  0.88 0.2141
+   models, zero_shot_with_freeze_values          17      0.076       0.61              0.90  0.87 0.1605
+   models, scratchpad                            17      0.245       0.05              0.76  0.92 0.1974
+   models, scratchpad_with_freeze_values         17      0.183       0.16              0.82  0.89 0.1793
+   public crowd (mean)                      Brier 0.1324 | corr(crowd error, anchor error) 0.93 | 50/50 with anchor 0.1247
+   super team (mean)                        Brier 0.0844 | corr(crowd error, anchor error) 0.85 | 50/50 with anchor 0.0976
+   within model (price minus no price), mean over models:
+     zero_shot : corr with anchor +0.14 (s.e. 0.01), distance -0.158 (s.e. 0.010), Brier -0.0536 (s.e. 0.0050); corr rises for 17 of 17 models
+     scratchpad: corr with anchor +0.05 (s.e. 0.01), distance -0.061 (s.e. 0.010), Brier -0.0153 (s.e. 0.0078); corr rises for 14 of 17 models
+
+PART B  all rounds, market items: 39 rounds, 670 model-rounds, 101 models
+   price minus no price, corr with market error    : +0.1954 (s.e. across rounds 0.0089), positive in 1.00 of rounds
+   price minus no price, distance to market price  : -0.1366 (s.e. across rounds 0.0038), positive in 0.00 of rounds
+   price minus no price, Brier                     : -0.0696 (s.e. across rounds 0.0040), positive in 0.00 of rounds
+   levels: corr with market error, no price 0.70 | with price 0.90; distance no price 0.211 | with price 0.072
+   shared share a among models: no price 0.87 | with price 0.89 | difference +0.025 (s.e. 0.005), rounds 39
+   by period: a (no price / with price) and within-model change in corr with the market error
+     2024: a 0.87 / 0.86 | corr change +0.13 | Brier change -0.0654
+     2025H1: a 0.90 / 0.91 | corr change +0.17 | Brier change -0.0499
+     2025H2: a 0.83 / 0.85 | corr change +0.25 | Brier change -0.0602
+     2026H1: a 0.87 / 0.90 | corr change +0.20 | Brier change -0.0800
+     2026H2: a 0.86 / 0.90 | corr change +0.19 | Brier change -0.0848

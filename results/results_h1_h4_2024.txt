@@ -1,0 +1,39 @@
+H1  shared-error share a by level (prompts without market prices)
+    0.90  same model, different prompts (mean over models)
+    0.86  different models, same developer (zero shot, mean)
+    0.86  different developers (one model each, zero shot)
+    0.86  all distinct models (zero shot)
+    0.92  frontier models (zero shot)
+    0.70  public, independent individuals
+    0.91  superforecasters, after discussion
+   (models with >=3 prompts: 12 | developers with >=2 models: 5)
+   Pearson error correlation of model pairs (zero shot): all 0.87, frontier 0.92
+
+H2  shared share, distinct models vs public (95% CI, question bootstrap)
+   models, zero shot            a = 0.86  [0.84, 0.88]
+   frontier models, zero shot   a = 0.92  [0.91, 0.93]
+   models, scratchpad           a = 0.91  [0.90, 0.92]
+   public                       a = 0.70  [0.67, 0.73]
+
+H3  floors, crowds and the best single model (FB-weighted raw Brier)
+   public: individual 0.2145 | floor F 0.1496 | observed mean crowd 0.1510 (median 49 per item)
+   supers: individual 0.1133 | floor F 0.1030 | observed mean crowd 0.1040 (median 7 per item)
+   best single model, no market price: 0.1586 ('claude_3p5_sonnet', 'scratchpad') | with market price: 0.1446 ('claude_3p5_sonnet', 'scratchpad_with_freeze_values')
+   model crowd, all (zero shot): observed 0.1862, floor 0.1844 | frontier: observed 0.1785, floor 0.1766
+   share of public individuals worse than the best model on their own items: 0.84
+   N* = s2/(B*-F): public crowd size that beats the best model = 7.2
+   public crowd of  1: resampled Brier 0.2146 (formula 0.2145)
+   public crowd of  2: resampled Brier 0.1821 (formula 0.1821)
+   public crowd of  3: resampled Brier 0.1724 (formula 0.1713)
+   public crowd of  5: resampled Brier 0.1624 (formula 0.1626)
+   public crowd of 10: resampled Brier 0.1564 (formula 0.1561)
+   public crowd of 20: resampled Brier 0.1526 (formula 0.1529)
+   public crowd of 40: resampled Brier 0.1514 (formula 0.1513)
+
+H4  optimal human weight w* in a human + model average (5-fold cross-fitting by question)
+   public crowd + best model (no price)     w* = 0.61 (folds 0.45-0.75) | humans 0.1510, models 0.1586, hybrid out of sample 0.1486
+   public crowd + best model (with price)   w* = 0.39 (folds 0.26-0.52) | humans 0.1510, models 0.1446, hybrid out of sample 0.1432
+   public crowd + frontier model crowd      w* = 0.99 (folds 0.91-1.00) | humans 0.1510, models 0.1785, hybrid out of sample 0.1517
+   super team + best model (no price)       w* = 0.98 (folds 0.94-1.00) | humans 0.1040, models 0.1586, hybrid out of sample 0.1043
+   super team + frontier model crowd        w* = 1.00 (folds 1.00-1.00) | humans 0.1040, models 0.1785, hybrid out of sample 0.1040
+   Bates-Granger at the floors (public vs frontier models): F_H 0.1496, F_M 0.1766, C 0.1506 -> w* = 1.04; correlation of shared errors 0.93

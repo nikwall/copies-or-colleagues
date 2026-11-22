@@ -1,0 +1,9 @@
+derived/
+data/raw/forecastbench/forecastbench-processed-forecast-sets/
+data/raw/forecastbench/*.tar.gz
+__pycache__/
+*.aux
+*.log
+*.bbl
+*.blg
+*.out

@@ -1,0 +1,2 @@
+# store and check out every file byte for byte (data checksums must match)
+* -text

@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this code or these results, please cite the paper."
+title: "Copies or Colleagues? Shared Error among AI Models and Human Forecasters"
+version: "1"
+date-released: 2026-11-22
+license: MIT
+repository-code: "https://github.com/nikwall/copies-or-colleagues"
+url: "https://research.nikwall.de/papers/copies-or-colleagues/"
+authors:
+  - family-names: Wallmeier
+    given-names: Niklas
+    orcid: "https://orcid.org/0000-0002-2346-1702"
+    affiliation: "Nieman Foundation at Harvard University; arq decisions"
+preferred-citation:
+  type: report
+  title: "Copies or Colleagues? Shared Error among AI Models and Human Forecasters"
+  authors:
+    - family-names: Wallmeier
+      given-names: Niklas
+  year: 2026
+  month: 11
+  notes: "Working paper, version 1"

@@ -1,0 +1,25 @@
+By question type (raw Brier, item mean within type)
+
+  dataset: 521 items
+   public  individual 0.2346  floor 0.1682  idio 0.0664
+   supers  individual 0.1310  floor 0.1223
+   best model without freeze values 0.1458 ('claude_3p5_sonnet', 'scratchpad')
+   best model with freeze values    0.1458 ('claude_3p5_sonnet', 'scratchpad_with_freeze_values')
+   frontier crowd, scratchpad 0.1634 (8 models); with freeze values 0.1634 (8 models)
+   N* public vs best model (no freeze): inf
+   N* public vs best model (with freeze): inf
+
+  market: 57 items
+   public  individual 0.1945  floor 0.1311  idio 0.0634
+   supers  individual 0.0956  floor 0.0836
+   best model without freeze values 0.1570 ('gpt_4o', 'scratchpad')
+   best model with freeze values    0.1293 ('gpt_4_turbo_0409', 'zero_shot_with_freeze_values')
+   frontier crowd, scratchpad 0.1747 (8 models); with freeze values 0.1471 (8 models)
+   N* public vs best model (no freeze): 2.4
+   N* public vs best model (with freeze): inf
+
+H1 ladder with the scratchpad prompt (and with freeze values)
+   scratchpad                       same developer 0.90 | one per developer 0.90 | all 0.90 | frontier 0.93
+   scratchpad_with_freeze_values    same developer 0.90 | one per developer 0.90 | all 0.90 | frontier 0.92
+   same model, different prompts, all with freeze values: 0.90 (17 models)
+   public individuals (item mean): 0.71; supers: 0.93

@@ -1,0 +1,61 @@
+
+== MAIN: dataset, 7+30 days, zero shot, no web search
+   a            first 0.870  last 0.929  slope/yr +0.0021 (s.e. 0.0090, t +0.2), rounds 39
+   a_top        first 0.969  last 0.940  slope/yr +0.0188 (s.e. 0.0073, t +2.6), rounds 37
+   corr         first 0.900  last 0.931  slope/yr -0.0007 (s.e. 0.0066, t -0.1), rounds 39
+   corr_top     first 0.971  last 0.942  slope/yr +0.0150 (s.e. 0.0060, t +2.5), rounds 37
+   disagr       first 0.028  last 0.016  slope/yr -0.0008 (s.e. 0.0022, t -0.4), rounds 39
+   floor        first 0.190  last 0.207  slope/yr -0.0006 (s.e. 0.0055, t -0.1), rounds 39
+   best_expost  first 0.169  last 0.199  slope/yr +0.0005 (s.e. 0.0049, t +0.1), rounds 39
+   gain         first -0.005  last 0.007  slope/yr -0.0016 (s.e. 0.0024, t -0.7), rounds 37
+   pair-level r on years +0.0042 (s.e. 0.0044), pair Brier -0.478 (s.e. 0.125), same developer +0.0060 (s.e. 0.0013); pairs 6983, rounds 39
+   share of rounds where the prior top-5 crowd beats the prior-best model: 0.69 (27 of 37)
+
+== R1: dataset, 7 days only, all rounds
+   a            first 0.867  last 0.942  slope/yr +0.0029 (s.e. 0.0096, t +0.3), rounds 39
+   a_top        first 0.968  last 0.958  slope/yr +0.0179 (s.e. 0.0063, t +2.9), rounds 37
+   corr         first 0.899  last 0.950  slope/yr +0.0004 (s.e. 0.0066, t +0.1), rounds 39
+   corr_top     first 0.970  last 0.959  slope/yr +0.0155 (s.e. 0.0054, t +2.9), rounds 37
+   disagr       first 0.028  last 0.013  slope/yr -0.0010 (s.e. 0.0022, t -0.4), rounds 39
+   floor        first 0.185  last 0.208  slope/yr -0.0013 (s.e. 0.0048, t -0.3), rounds 39
+   best_expost  first 0.164  last 0.209  slope/yr -0.0002 (s.e. 0.0050, t -0.0), rounds 39
+   gain         first -0.006  last 0.020  slope/yr -0.0007 (s.e. 0.0027, t -0.2), rounds 37
+   pair-level r on years +0.0037 (s.e. 0.0045), pair Brier -0.441 (s.e. 0.135), same developer +0.0047 (s.e. 0.0013); pairs 6983, rounds 39
+
+== R2: main items, zero shot WITH freeze values
+   a            first 0.870  last 0.944  slope/yr +0.0036 (s.e. 0.0089, t +0.4), rounds 39
+   a_top        first 0.969  last 0.962  slope/yr +0.0222 (s.e. 0.0067, t +3.3), rounds 37
+   corr         first 0.900  last 0.949  slope/yr +0.0010 (s.e. 0.0064, t +0.2), rounds 39
+   corr_top     first 0.971  last 0.963  slope/yr +0.0184 (s.e. 0.0053, t +3.5), rounds 37
+   disagr       first 0.028  last 0.012  slope/yr -0.0012 (s.e. 0.0021, t -0.6), rounds 39
+   floor        first 0.190  last 0.196  slope/yr -0.0022 (s.e. 0.0049, t -0.5), rounds 39
+   best_expost  first 0.169  last 0.198  slope/yr +0.0003 (s.e. 0.0048, t +0.1), rounds 39
+   gain         first -0.005  last 0.014  slope/yr +0.0001 (s.e. 0.0022, t +0.0), rounds 37
+   pair-level r on years +0.0041 (s.e. 0.0042), pair Brier -0.518 (s.e. 0.117), same developer +0.0056 (s.e. 0.0013); pairs 6983, rounds 39
+
+== R3: main items, web-search settings included
+   a            first 0.870  last 0.931  slope/yr -0.0012 (s.e. 0.0092, t -0.1), rounds 39
+   a_top        first 0.969  last 0.969  slope/yr +0.0170 (s.e. 0.0075, t +2.3), rounds 37
+   corr         first 0.900  last 0.932  slope/yr -0.0040 (s.e. 0.0068, t -0.6), rounds 39
+   corr_top     first 0.971  last 0.971  slope/yr +0.0138 (s.e. 0.0062, t +2.2), rounds 37
+   disagr       first 0.028  last 0.015  slope/yr -0.0003 (s.e. 0.0022, t -0.2), rounds 39
+   floor        first 0.190  last 0.198  slope/yr -0.0030 (s.e. 0.0051, t -0.6), rounds 39
+   best_expost  first 0.169  last 0.196  slope/yr -0.0030 (s.e. 0.0050, t -0.6), rounds 39
+   gain         first -0.005  last 0.002  slope/yr -0.0037 (s.e. 0.0025, t -1.5), rounds 37
+   pair-level r on years -0.0000 (s.e. 0.0044), pair Brier -0.431 (s.e. 0.113), same developer +0.0039 (s.e. 0.0013); pairs 7638, rounds 39
+
+== Market questions: models (zero shot, no price) vs the market price
+   mkt_corr     first 0.716  last 0.879  slope/yr -0.0092 (s.e. 0.0197, t -0.5), rounds 39
+   mkt_brier    first 0.086  last 0.148  slope/yr +0.0344 (s.e. 0.0082, t +4.2), rounds 39
+   best_model   first 0.157  last 0.146  slope/yr +0.0077 (s.e. 0.0165, t +0.5), rounds 39
+   models_beating_mkt first 0.000  last 0.182  slope/yr +0.0210 (s.e. 0.0151, t +1.4), rounds 39
+
+== Same model, different settings (2026 rounds, 7-day dataset items)
+   2026-07-05: within-model a 0.96 (7 models) | across distinct models a 0.96
+   2026-07-19: within-model a 0.95 (6 models) | across distinct models a 0.94
+   2026-08-02: within-model a 0.95 (6 models) | across distinct models a 0.95
+   2026-08-16: within-model a 0.98 (5 models) | across distinct models a 0.94
+   2026-08-30: within-model a 0.98 (3 models) | across distinct models a 0.92
+   2026-09-13: within-model a 0.98 (3 models) | across distinct models a 0.93
+   2026-09-27: within-model a 0.99 (2 models) | across distinct models a 0.92
+   2026-10-11: within-model a 0.99 (1 models) | across distinct models a 0.95
