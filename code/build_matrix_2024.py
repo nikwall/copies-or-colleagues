@@ -10,6 +10,9 @@ Writes derived/matrix_2024.csv.
 """
 import csv, json, os, re, sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from longpath import lp  # noqa: E402  (some file names exceed Windows' 260-character limit)
+
 ROOT = sys.argv[1]
 RAW = os.path.join(ROOT, "data", "raw", "forecastbench")
 PROC = os.path.join(RAW, "forecastbench-processed-forecast-sets", "2024-07-21")
@@ -24,7 +27,7 @@ def key(qid, source, res_date):
 
 # items and outcomes from the FB public-median file (same 596 rows as every model file)
 items = {}
-for f in json.load(open(os.path.join(PROC, "2024-07-21.ForecastBench.human_public.json"), encoding="utf-8"))["forecasts"]:
+for f in json.load(open(lp(os.path.join(PROC, "2024-07-21.ForecastBench.human_public.json")), encoding="utf-8"))["forecasts"]:
     if f["resolved"] and f["resolved_to"] in (0, 0.0, 1, 1.0):
         items[key(f["id"], f["source"], f["resolution_date"])] = (f["source"], float(f["resolved_to"]))
 
@@ -36,8 +39,8 @@ def add(group, forecaster, model, org, prompt, k, p, imputed):
                      forecaster=forecaster, model=model, org=org, prompt=prompt,
                      forecast=p, imputed=int(imputed)))
 
-for fn in sorted(os.listdir(PROC)):
-    d = json.load(open(os.path.join(PROC, fn), encoding="utf-8"))
+for fn in sorted(os.listdir(lp(PROC))):
+    d = json.load(open(lp(os.path.join(PROC, fn)), encoding="utf-8"))
     stem = fn[len("2024-07-21."):-len(".json")]
     org = d.get("model_organization", "")
     if stem.startswith("ForecastBench."):

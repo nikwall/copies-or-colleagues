@@ -12,8 +12,9 @@ A prominent account of when AI transforms the economy rests on the premise that 
 because people err in different directions while copies of a model do not. The paper tests this premise on
 [ForecastBench](https://www.forecastbench.org), where people and machines forecast the same questions before the outcomes are known.
 It measures how much of each forecaster's squared error the rest of a group shares, the part that averaging cannot remove.
-Models from different developers share 86 percent, members of the public 70 percent, and the best tool-using tournament system
-shares 93 percent with the best plain model. People kept the lead only where institutions pooled their information, in a
+Even after removing the largest possible role of noise in the outcome, models from different developers share at least
+73 percent of their deviations from the truth, members of the public at least 42 percent. The tool-using systems that reached
+parity with superforecasters in 2026 are more accurate than plain models, but averaging the two adds little. People kept the lead only where institutions pooled their information, in a
 superforecaster team that discussed its forecasts and in prediction markets.
 
 ## Replicate every number
@@ -29,7 +30,8 @@ python -I run_all.py
 [v1.0](https://github.com/nikwall/copies-or-colleagues/releases/tag/v1.0) of this repository (141 MB, SHA-256 checked) and unpacks
 it to `data/raw/forecastbench/`. `run_all.py` then runs the scripts in `code/` in order and writes all outputs to `derived/`,
 including the console output of each script as `derived/log_<script>.txt`. The outputs behind version 1 of the paper are in
-`results/` for comparison. The bootstrap uses a fixed seed, so the numbers should match exactly.
+`results/` for comparison. The bootstrap uses a fixed seed, so the numbers should match exactly. A run from a fresh clone on
+22 November 2026 reproduced every file in `results/`.
 
 | Script | Paper |
 |---|---|
@@ -38,7 +40,8 @@ including the console output of each script as `derived/log_<script>.txt`. The o
 | `bootstrap_2024.py` | Question-level bootstrap for H3 and H4 (Section 5.2, Table 5) |
 | `build_panel_rounds.py`, `analysis_h5.py`, `make_figure_data.py` | H5: Table 6, Figure 2, Appendix Table 9 (Panel B) |
 | `analysis_h6.py` | H6: Table 7 |
-| `build_panel_external.py`, `analysis_h7_tournament.py` | H7 and the market-price comparison: Table 8, Section 5.5 |
+| `build_panel_external.py`, `analysis_h7_tournament.py` | H7 and the market-price comparison: Table 8 (Panels A and B), Section 5.5 |
+| `analysis_noise_parity.py` | Bound on outcome noise: Table 9, Section 5.7; entries of the parity teams: Table 8, Panel C |
 
 Some ForecastBench file names exceed the 260-character path limit of Windows. `code/longpath.py` handles this with the `\\?\`
 prefix, and the scripts work unchanged on macOS and Linux.

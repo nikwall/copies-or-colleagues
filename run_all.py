@@ -24,6 +24,7 @@ STEPS = [
     ("analysis_h5", "H5 (Table 6, Figure 2, Appendix Table 9, Panel B)"),
     ("analysis_h6", "H6 (Table 7)"),
     ("analysis_h7_tournament", "H7 and the market-price comparison (Table 8)"),
+    ("analysis_noise_parity", "bound on outcome noise (Table 9) and the parity teams (Table 8, Panel C)"),
     ("make_figure_data", "paper/figures/h5_rounds.dat"),
 ]
 

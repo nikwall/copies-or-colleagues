@@ -1,0 +1,51 @@
+== (1a) 2024 round, 578 items: outcome-noise bound
+   lowest Brier on dataset items: 0.1223 (super_median; 114 candidates with full coverage)
+   lowest Brier on market items:  0.0830 (super_median; 116 candidates)
+   bound on irreducible noise U (equal weights): 0.1027
+                                       group    B1     F    s2     a  a_null_max  rho_LB  spread
+       Public, independent individuals (500) 0.215 0.150 0.065 0.698       0.479   0.420   0.255
+      Superforecasters after discussion (40) 0.113 0.103 0.010 0.909       0.906   0.030   0.102
+           All 17 distinct models, zero shot 0.214 0.184 0.030 0.862       0.480   0.734   0.172
+            Eight frontier models, zero shot 0.192 0.177 0.015 0.921       0.535   0.829   0.123
+Distinct models, zero shot with freeze value 0.187 0.160 0.027 0.855       0.549   0.678   0.165
+   a: observed shared share | a_null_max: the most that independent calibrated members of the same accuracy
+   could share | rho_LB: lower bound on the shared share of deviations from the truth | spread: sqrt(s2)
+
+== (1b) Top five models per round (H5 sample, zero shot, dataset items with 7- and 30-day horizons)
+             a  a_null_max  rho_LB  spread     B1  U_max
+period                                                  
+2025 H1  0.961       0.932   0.383   0.080  0.168  0.156
+2025 H2  0.935       0.930   0.192   0.104  0.173  0.161
+2026 H1  0.974       0.882   0.674   0.064  0.162  0.143
+2026 H2  0.971       0.826   0.833   0.068  0.174  0.143
+   all rounds: a 0.962, a_null_max 0.891, rho_LB 0.541, spread 0.077, B1 0.168, U_max 0.150 (37 rounds)
+
+== (1b) Best system and best base model (H7 sample), same measures
+             a  a_null_max  rho_LB  spread     B1  U_max
+period                                                  
+2025 H2  0.931       0.952   0.067   0.109  0.172  0.164
+2026 H1  0.924       0.877   0.346   0.107  0.159  0.140
+2026 H2  0.953       0.858   0.614   0.087  0.167  0.143
+   all rounds: a 0.935, a_null_max 0.880, rho_LB 0.403, spread 0.100, B1 0.163, U_max 0.144 (23 rounds)
+
+== (2) Entries of the three teams named in the parity report, against the best base model of the round
+                 entries  entry_rounds  rounds  brier_sys  brier_base      a  r_pair  rho_LB  gain_avg
+team                                                                                                  
+Cassi AI               4             6       4      0.172       0.179  0.945   0.951   0.206     0.002
+Google DeepMind       23            26      10      0.150       0.163  0.874   0.881   0.153     0.004
+xAI                    5             5       3      0.138       0.151  0.946   0.948   0.238    -0.003
+   all three teams (37 entry-rounds, 15 rounds): brier_sys 0.152, brier_base 0.164, a 0.895, r_pair 0.901, rho_LB 0.173, gain_avg 0.003
+   base minus entry Brier: +0.0117 (s.e. 0.0031); entry better in 28 of 37
+   for comparison, best system (prior-ranked): a 0.935, r_pair 0.938, rho_LB 0.403
+
+== (2) Market items: correlation with the price's error and Brier minus the price, by team
+                 entry_rounds  r_price  diff_price  beats
+team                                                     
+Cassi AI                    9    0.898       0.004  0.333
+Google DeepMind            29    0.913       0.005  0.448
+other                     601    0.942       0.013  0.306
+xAI                         5    0.931       0.000  0.400
+   Cassi AI         Brier minus price +0.0035 (s.e. 0.0039), n 9
+   Google DeepMind  Brier minus price +0.0047 (s.e. 0.0027), n 29
+   other            Brier minus price +0.0127 (s.e. 0.0011), n 601
+   xAI              Brier minus price +0.0002 (s.e. 0.0027), n 5
